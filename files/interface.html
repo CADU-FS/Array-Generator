@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Generator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Array Generator</h1>
+  </header>
+
+  <section>
+    <div id="array-controls">
+      <h2>Array</h2>
+      <p>
+        <label for="loop-init">From:</label>
+        <input type="number" name="loop-control" id="loop-init">
+        <label for="loop-end">To:</label>
+        <input type="number" name="loop-control" id="loop-end">
+        <label for="loop-step">Step:</label>
+        <input type="number" name="loop-control" id="loop-step">
+      </p>
+      <p>
+        <input type="checkbox" name="keep-values" id="keep-values" checked>
+        <label for="keep-values">Keep values</label>
+      </p>
+      <p>
+        <input type="checkbox" name="brackets" id="brackets" checked>
+        <label for="brackets">Include square brackets</label>
+      </p>
+      <p>
+        <input type="button" value="Generate" onclick="arrayGenerate()">
+      </p>
+    </div>
+    
+    <div id="matrix-controls">
+      <h2>Matrix</h2>
+      <p>
+        <label for="height">Height:</label>
+        <input type="number" name="length" id="height">
+        <label for="height">Width:</label>
+        <input type="number" name="length" id="width">
+      </p>
+      <p>
+        <input type="button" value="Generate" onclick="matrixGenerate()">
+      </p>
+    </div>
+
+    <div id="sort-controls">
+      <p>
+        <input type="radio" name="sort-method" id="ascending" value="ascending" checked>
+        <label for="ascending">Ascending</label>
+        <input type="radio" name="sort-method" id="descending" value="descending">
+        <label for="descending">Descending</label>
+        <input type="radio" name="sort-method" id="single-value" value="single-value">
+        <label for="single-value">Single Value</label>
+        <input type="radio" name="sort-method" id="random" value="random">
+        <label for="random">Random</label>
+      </p>
+    </div>
+
+    <!-- FUTURE
+    <div id="futuro">
+      <p>
+        <input type="radio" name="matrix-content" id="number" checked>
+        <label for="number">Numbers</label>
+        <input type="radio" name="matrix-content" id="letter">
+        <label for="letter">Letters</label>
+        <input type="radio" name="matrix-content" id="number-letter">
+        <label for="number-letter">Number and letters</label>
+      </p>
+      <p>
+        <input type="checkbox" name="custom-matrix-check" id="custom-matrix-check">
+        <label for="custom-matrix-check">Custom values</label>
+        <input type="text" name="custom-matrix-value" id="custom-matrix-value">
+        <div id="custom-matrix-alert"></div>
+      </p>
+    </div>
+    -->
+
+    <div id="display-area">
+      <p>
+        <button id="visor-more-button" onclick="revealFullResult()">Show More</button>
+        <button onclick="copyValue()">Copy Value</button>
+      </p>
+      <div id="error-message"></div>
+      <div id="result-display"></div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
